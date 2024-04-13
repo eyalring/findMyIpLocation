@@ -7,14 +7,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
-
-
 var keepGapOfSecondsBetweenCalls int64
 
-
 func main() {
-	utils.ensureEnvVars()
+	ensureEnvVars()
 	dbConnector, dbError := initDb()
 	
     keepGapOfSecondsBetweenCalls = initializeTimeGapsForService()
